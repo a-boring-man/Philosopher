@@ -1,5 +1,5 @@
+![](https://github.com/a-boring-man/Philosopher/blob/main/100_score_icon.png)
+
 # Philosopher
 
-A early 42 school project.
-
-this project is the famous philosopher probleme design to make us learn how multithreading work, seek performance while avoiding datarace.
+An early 42 school project, the famous dining philosophers problem, was designed to teach us how multithreading works, how to seek performance while avoiding data races.
