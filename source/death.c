@@ -6,7 +6,7 @@
 /*   By: jrinna <jrinna@student.42lyon.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/11 11:18:31 by jrinna            #+#    #+#             */
-/*   Updated: 2023/07/17 13:16:34 by jrinna           ###   ########lyon.fr   */
+/*   Updated: 2023/07/18 13:48:50 by jrinna           ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@ static unsigned long long	ft_gettimestamp(t_philo *p)
 {
 	gettimeofday(&(p->data->t_cur), NULL);
 	return ((u_int64_t)((p->data->t_cur.tv_usec - p->data->t_start.tv_usec)
-		/ 1000) + (u_int64_t)((p->data->t_cur.tv_sec - p->data->t_start.tv_sec)
+		* 0.001) + (u_int64_t)((p->data->t_cur.tv_sec - p->data->t_start.tv_sec)
 		* 1000));
 }
 

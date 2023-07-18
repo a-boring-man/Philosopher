@@ -6,7 +6,7 @@
 /*   By: jrinna <jrinna@student.42lyon.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/08 10:04:28 by jrinna            #+#    #+#             */
-/*   Updated: 2022/03/18 14:53:37 by jrinna           ###   ########lyon.fr   */
+/*   Updated: 2023/07/18 14:03:39 by jrinna           ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -47,17 +47,19 @@ static void	ft_msleep(t_philo *p, long timems)
 {
 	struct timeval	t_us;
 	struct timeval	t_uf;
+	int				sleep_time;
 
 	gettimeofday(&(t_us), NULL);
-	usleep(0.5 * timems * 1000);
+	if (p->data->p_nbr > 90)
+		sleep_time = 600;
+	else
+		sleep_time = 100;
+	usleep(0.9 * timems * 1000);
 	gettimeofday(&(t_uf), NULL);
 	while ((long)((t_uf.tv_usec - t_us.tv_usec) / 1000
 		+ (t_uf.tv_sec - t_us.tv_sec) * 1000) < timems)
 	{
-		if (p->data->p_nbr > 90)
-			usleep(600);
-		else
-			usleep(100);
+		usleep(sleep_time);
 		gettimeofday(&(t_uf), NULL);
 	}
 }

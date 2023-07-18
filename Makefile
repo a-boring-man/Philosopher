@@ -6,7 +6,7 @@
 #    By: jrinna <jrinna@student.42lyon.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/02/28 17:13:50 by jrinna            #+#    #+#              #
-#    Updated: 2023/07/17 13:16:26 by jrinna           ###   ########lyon.fr    #
+#    Updated: 2023/07/18 13:44:50 by jrinna           ###   ########lyon.fr    #
 #                                                                              #
 # **************************************************************************** #
 
@@ -30,7 +30,7 @@ INC := $(addprefix $(DIR_INC)/,$(LST_INC))
 
 #### OTHER ####
 CC := gcc
-CFLAGS := -Wall -Wextra -Werror
+CFLAGS := -Wall -Wextra -Werror -O3
 NAME := philo
 #### OTHER ####
 
